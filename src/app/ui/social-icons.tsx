@@ -3,7 +3,7 @@ import { FaTwitter, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
 export function SocialIcons() {
   return (
-    <div className='flex mt-1 text-xl'>
+    <div className='flex text-xl'>
       <Link className='mr-5' href='/'>
         <FaLinkedinIn />
       </Link>
