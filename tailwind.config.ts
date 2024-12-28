@@ -8,6 +8,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        mono: ['var(--font-ibm-plex-mono)'],
+        sans: ['var(--font-raleway)'],
+      },
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',

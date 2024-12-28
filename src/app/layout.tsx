@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { ibmPlexMono } from './ui/fonts';
+import { ibmPlexMono, raleway } from './ui/fonts';
 
 export const metadata: Metadata = {
   title: 'Portfolio',
@@ -14,7 +14,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${ibmPlexMono.className} antialiased`}>{children}</body>
+      <body
+        className={`${raleway.variable} ${ibmPlexMono.variable} antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
