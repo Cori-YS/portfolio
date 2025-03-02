@@ -18,6 +18,9 @@ export default {
         gray: '#1b1b1b',
         'gray-text': '#9c9c9c',
       },
+      padding: {
+        '0.2': '1px',
+      },
     },
   },
   plugins: [],
