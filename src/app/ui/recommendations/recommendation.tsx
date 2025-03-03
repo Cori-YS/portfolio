@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export function Recommendation() {
   return (
@@ -9,7 +10,7 @@ export function Recommendation() {
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim.
         </p>
-        <div className='flex'>
+        <Link href='' className='flex'>
           <Image
             src='profile-placeholder.svg'
             width={50}
@@ -18,7 +19,7 @@ export function Recommendation() {
             className='rounded-full'
           />
           <span className='pt-3 pl-3 font-bold font-sans'>Client Name</span>
-        </div>
+        </Link>
       </div>
       <h2 className='absolute flex top-6 left-10 transform -translate-x-1/2 -translate-y-1/2'>
         <span className='bg-gray-700 px-2 font-normal font-sans text-8xl'>
