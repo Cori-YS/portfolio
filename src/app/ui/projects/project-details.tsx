@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { MouseEvent, useState } from 'react';
 import { FaTimes, FaNodeJs } from 'react-icons/fa';
 
 export function ProjectDetails({ open }: { open: boolean }) {
@@ -9,13 +9,18 @@ export function ProjectDetails({ open }: { open: boolean }) {
   const handleModal = () => {
     setModal(!openModal);
   };
+  const handleClick = (event: MouseEvent<HTMLDivElement>) => {
+    if ((event.target as HTMLElement).classList.contains('outside')) {
+      handleModal();
+    }
+  };
 
   return (
     <div>
       {openModal && (
         <div
-          className='fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50'
-          onClick={handleModal}
+          className='outside fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50'
+          onClick={handleClick}
         >
           <div className='bg-gray shadow-lg rounded-lg w-[900px] h-[600px]'>
             <div className='grid grid-cols-2'>
