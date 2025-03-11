@@ -4,7 +4,7 @@ import Link from 'next/link';
 export function Recommendation() {
   return (
     <div className='bg-gradient-to-r from-white to-background relative rounded-lg w-72 h-48 m-5 p-0.2'>
-      <div className='bg-background p-3 rounded-lg h-full'>
+      <div className='bg-background p-3 rounded-l-lg h-full'>
         <p className='pb-3 font-mono text-sm text-gray-text'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
