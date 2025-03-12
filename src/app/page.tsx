@@ -1,11 +1,11 @@
-import { ExperienceDetails } from './ui/experience/experience-details';
 import { Header } from './ui/header';
+import { Skill } from './ui/skills/skill';
 
 export default function Home() {
   return (
     <div>
       <Header />
-      <ExperienceDetails open={true} />
+      <Skill />
     </div>
   );
 }
