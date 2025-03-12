@@ -3,7 +3,7 @@ import { SocialIcons } from './social-icons';
 
 export function Header() {
   return (
-    <div className='flex w-3/4 p-7 bg-gray text-gray-text font-mono font-normal text-sm rounded-b-lg justify-center place-self-center'>
+    <div className='flex w-3/4 p-7 bg-gray text-gray-text font-mono font-normal text-sm rounded-b-lg justify-center mx-auto'>
       <Link className='mr-14' href='/'>
         Home
       </Link>
