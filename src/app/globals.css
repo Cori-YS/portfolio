@@ -42,14 +42,24 @@ body {
 }
 
 progress {
-  border-radius: 7px;
+  border-radius: 10px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  appearance: none;
 }
+
 progress::-webkit-progress-bar {
   background-color: #9c9c9c;
   border-radius: 10px;
 }
+
 progress::-webkit-progress-value {
   background-color: #2456c2;
   border-radius: 10px;
+}
+
+progress::-moz-progress-bar {
+  background-color: #2456c2;
+  border-radius: 10px;
+  mask-image: radial-gradient(circle, white 100%, transparent 100%);
 }
