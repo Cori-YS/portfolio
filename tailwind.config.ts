@@ -16,6 +16,8 @@ export default {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
         gray: '#1b1b1b',
+        blue: '#1c62a3',
+        'light-blue': '#7BADF6',
         'gray-text': '#9c9c9c',
       },
       padding: {
