@@ -10,7 +10,7 @@ export function SocialIcons() {
       <Link className='mr-5 hover:text-blue' href='/'>
         <FaGithub />
       </Link>
-      <Link className='mr-5 hover:text-blue' href='/'>
+      <Link className='hover:text-blue' href='/'>
         <FaTwitter />
       </Link>
     </div>
