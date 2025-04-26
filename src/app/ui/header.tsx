@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { SocialIcons } from './social-icons';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 
 type WindowSize = {
@@ -35,16 +36,25 @@ export const useWindowSize = (): WindowSize => {
   return windowSize;
 };
 
+const links = [
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Projects', href: '/projects' },
+  { name: 'Skills', href: '/skills' },
+  { name: 'Experience', href: '/experience' },
+];
+
 export function Header() {
   const [openMenu, setMenu] = useState(false);
   const handleClick = () => {
     setMenu(!openMenu);
   };
   const size = useWindowSize();
+  const pathname = usePathname();
 
   return (
     <header>
-      <div className='grid grid-cols-2 lg:grid-cols-3 lg:gap-0 w-full h-[70px] bg-gray text-gray-text font-mono font-normal'>
+      <div className='grid grid-cols-2 lg:grid-cols-3 lg:gap-0 w-full h-[70px] bg-gray text-gray-text font-mono font-normal mx-auto lg:w-[1380] lg:rounded-b-xl'>
         <Link
           className='p-4 ml-7 text-4xl text-white font-sans font-extrabold'
           href='/'
@@ -70,24 +80,27 @@ export function Header() {
               }
             )}
           >
-            <Link className='hover:text-light-blue lg:mr-10' href='/'>
-              Home
-            </Link>
-            <Link className='hover:text-light-blue lg:mr-10' href='/'>
-              About
-            </Link>
-            <Link className='hover:text-light-blue lg:mr-10' href='/'>
-              Projects
-            </Link>
-            <Link className='hover:text-light-blue lg:mr-10' href='/'>
-              Skills
-            </Link>
-            <Link className='hover:text-light-blue lg:mr-10' href='/'>
-              Experience
-            </Link>
+            {links.map((link) => {
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={clsx('hover:text-light-blue lg:mr-10', {
+                    'text-blue': pathname === link.href,
+                  })}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
             <Link
-              className='hover:text-light-blue lg:mr-28 whitespace-nowrap'
-              href='/'
+              className={clsx(
+                'hover:text-light-blue lg:mr-28 whitespace-nowrap',
+                {
+                  'text-blue': pathname === '/contact',
+                }
+              )}
+              href='/contact'
             >
               Get In Touch
             </Link>
