@@ -54,7 +54,7 @@ export function Header() {
 
   return (
     <header>
-      <div className='grid grid-cols-2 lg:grid-cols-3 lg:gap-0 w-full h-[70px] bg-gray text-gray-text font-mono font-normal mx-auto lg:w-[1380] lg:rounded-b-xl'>
+      <div className='grid grid-cols-2 lg:grid-cols-3 lg:gap-0 w-full h-[70px] bg-gray text-gray-text font-mono font-normal mx-auto lg:w-[1380] lg:rounded-b-md'>
         <Link
           className='p-4 ml-1 text-4xl text-white font-sans font-extrabold lg:ml-7'
           href='/'
