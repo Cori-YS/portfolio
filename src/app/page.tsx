@@ -8,10 +8,10 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <div className='flex mx-auto justify-center p-5 md:grid md:grid-cols-2 md:w-[820]'>
+      <div className='flex mx-auto justify-center p-5 md:grid md:grid-cols-2 md:gap-12 md:w-[820]'>
         <div className='font-mono grid grid-cols-1 gap-4'>
           <div className='mx-auto sm:grid sm:grid-cols-2 gap-5'>
-            <div className='md:col-span-2'>
+            <div className='md:col-span-2 md:mt-8'>
               <h2>Back End Developer</h2>
               <h1 className='font-sans text-4xl sm:text-6xl font-extrabold'>
                 Hello I&apos;m <br />{' '}
@@ -28,7 +28,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <p className='text-base text-gray-text md:p-6'>
+          <p className='text-base text-gray-text md:p-3'>
             Intro text: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.{' '}
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.{' '}
