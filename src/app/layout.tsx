@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { ibmPlexMono, raleway } from './ui/fonts';
+import { Header } from './ui/header';
 
 export const metadata: Metadata = {
   title: 'Portfolio',
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body
         className={`${raleway.variable} ${ibmPlexMono.variable} antialiased`}
       >
+        <Header />
         {children}
       </body>
     </html>

@@ -1,4 +1,3 @@
-import { Header } from './ui/header';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaDownload } from 'react-icons/fa';
@@ -7,7 +6,6 @@ import { SocialIcons } from './ui/social-icons';
 export default function Home() {
   return (
     <div>
-      <Header />
       <div className='flex mx-auto justify-center p-5 md:grid md:grid-cols-2 md:gap-12 md:w-[820] lg:w-[1200]'>
         <div className='font-mono grid grid-cols-1 gap-4'>
           <div className='mx-auto sm:grid sm:grid-cols-2 gap-5'>
